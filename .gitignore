@@ -1,0 +1,15 @@
+# Dependencies
+/node_modules/
+/vendor/
+
+# Build artifacts (ignore compiled output, not source)
+/public/build/
+/public/hot
+
+# Environment
+.env
+
+# Logs / OS junk
+npm-debug.log
+.DS_Store
+Thumbs.db
