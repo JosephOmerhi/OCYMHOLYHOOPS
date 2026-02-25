@@ -1,3 +1,3 @@
 <div class="page-header">
-  <h1>{!! $title !!}</h1>
+  <h1>OCYM HOLY HOOPS</h1>
 </div>

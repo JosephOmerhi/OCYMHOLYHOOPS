@@ -153,3 +153,17 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+add_action('init', function () {
+    register_post_type('player', [
+        'labels' => [
+            'name' => 'Players',
+            'singular_name' => 'Player',
+        ],
+        'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-groups',
+        'supports' => ['title', 'thumbnail'],
+        'rewrite' => ['slug' => 'players'],
+    ]);
+});
