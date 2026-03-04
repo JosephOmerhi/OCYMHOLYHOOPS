@@ -167,3 +167,52 @@ add_action('init', function () {
         'rewrite' => ['slug' => 'players'],
     ]);
 });
+
+add_action('init', function () {
+  register_post_type('coach', [
+    'labels' => [
+      'name' => 'Coaches',
+      'singular_name' => 'Coach',
+      'add_new_item' => 'Add New Coach',
+      'edit_item' => 'Edit Coach',
+    ],
+    'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-groups',
+        'supports' => ['title', 'thumbnail'],
+        'rewrite' => ['slug' => 'coaches'],
+  ]);
+});
+
+add_action('init', function () {
+  register_post_type('staff', [
+    'labels' => [
+      'name' => 'Support Staff',
+      'singular_name' => 'Support Staff',
+      'add_new_item' => 'Add New Staff Member',
+      'edit_item' => 'Edit Staff Member',
+    ],
+    'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-groups',
+        'supports' => ['title', 'thumbnail'],
+        'rewrite' => ['slug' => 'support-staff'],
+  ]);
+});
+
+add_action('init', function () {
+  register_post_type('game', [
+    'labels' => [
+      'name' => 'Games',
+      'singular_name' => 'Game',
+      'add_new_item' => 'Add New Game',
+      'edit_item' => 'Edit Game',
+    ],
+    'public' => true,
+    'show_in_rest' => true,
+    'menu_icon' => 'dashicons-calendar-alt',
+    'supports' => ['title'],
+    'has_archive' => false,
+    'rewrite' => ['slug' => 'games'],
+  ]);
+});
